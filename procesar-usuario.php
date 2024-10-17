@@ -6,7 +6,7 @@ $password = "123";
 $database = "baseDAt";
 
 // Crear la conexión
-$conn = new mysqli($host, $usuario, $password, $baseDeDatos);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Verificar la conexión
 if ($conn->connect_error) {
