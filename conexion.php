@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "atenea";
 $password = "123";
-$database = "atenea";
+$database = "baseDAt";
 
 //Crear conexion
 
