@@ -1,10 +1,9 @@
 <!-- archivo: procesar_registro.php -->
 <?php
-// Datos de conexión a la base de datos
-$host = 'localhost';  // O la IP de tu servidor
-$usuario = 'atenea';  // Usuario de MySQL
-$password = '123';  // Contraseña de MySQL
-$baseDeDatos = 'baseDAt';  // Nombre de la base de datos
+$servername = "localhost";
+$username = "atenea";
+$password = "123";
+$database = "baseDAt";
 
 // Crear la conexión
 $conn = new mysqli($host, $usuario, $password, $baseDeDatos);
