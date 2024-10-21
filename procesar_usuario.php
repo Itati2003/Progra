@@ -2,8 +2,10 @@
 include ("conexion.php");
 if($conn){
     echo "Conexion exitosa";
+     echo "<br>";
     error_reporting(E_ALL);
     ini_set('display_errors' ,1);
+if(isset($_POST['register])){
       $nombre=$_POST['nombre'];
       $email=$_POST['email'];
       $password=$_POST['password'];
@@ -13,6 +15,7 @@ if($conn){
     } else {
         echo "Error: ". $sql ."<br>". $conn->error; 
        }
+    }
     $conn->close();
 
 }
