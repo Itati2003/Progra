@@ -25,6 +25,7 @@
             <form id="formulario1" name="formulario" method="post" action="agre_carrito.php">
             <input name="precio" type="hidden" id="precio" value="50" />
             <input name="producto" type="hidden" id="producto" value="Producto1" />
+            <input name="cantidad" type="hidden" id="cantidad" value="1" />
             <img src="Producto1.jpeg" alt="Producto1">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 1</h5>
@@ -34,9 +35,10 @@
             </form>
         </div>
         <div class="producto">
-            <form id="formulario"2 name="formulario" method="post" action="carrito.php">
+            <form id="formulario2" name="formulario" method="post" action="agre_carrito.php">
             <input name="precio" type="hidden" id="precio" value="900" />
             <input name="producto" type="hidden" id="producto" value="Producto2" />
+            <input name="cantidad" type="hidden" id="cantidad" value="1" />
             <img src="Producto2.jpeg" alt="Producto2">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 2</h5>
@@ -46,9 +48,10 @@
             </form>
         </div>
         <div class="producto">
-            <form id="formulario3" name="formulario" method="post" action="carrito.php">
+            <form id="formulario3" name="formulario" method="post" action="agre_carrito.php">
             <input name="precio" type="hidden" id="precio" value="1230" />
             <input name="producto" type="hidden" id="producto" value="Producto3" />
+            <input name="cantidad" type="hidden" id="cantidad" value="1" />
             <img src="Producto3.jpeg" alt="Producto3">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 3</h5>
