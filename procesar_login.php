@@ -15,7 +15,7 @@ if($conn){
             if($result && $result->num_rows > 0){
                 $user=$result->fetch_assoc();
                 $_SESSION['nombre']=$user['nombre'];
-                header("Location: productos.html");
+                header("Location: productos.php");
             }else{
             echo "Correo o contraseña incorrectos";
             }
