@@ -1,4 +1,4 @@
-<?php session_start();
+der<?php session_start();
 if (!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = array();
 }
@@ -21,5 +21,5 @@ $carrito_user = $_SESSION['carrito'];
       $carrito_user[]=array("Producto"=>$producto. "precio"=>$precio, "cantidad"=>$cantidad;
   }
 $_SESSION['carrito']=$carrito_user;
-
+header("Location: ".$_SERVER['HTTP_REFERER']."");
 ?>
