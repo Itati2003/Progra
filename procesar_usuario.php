@@ -5,7 +5,7 @@ if($conn){
      echo "<br>";
     error_reporting(E_ALL);
     ini_set('display_errors' ,1);
-if(isset($_POST['register])){
+if(isset($_POST['registrar'])){
       $nombre=$_POST['nombre'];
       $email=$_POST['email'];
       $password=$_POST['password'];
