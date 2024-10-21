@@ -5,7 +5,7 @@ if($conn){
 #error_reporting(E_ALL);
 #ini_set('display_errors' ,1);
 if(isse($_POST['registrar'])){
-     echo "Conexion exitosa";
+     echo "Post";
  #   $nombre=$_POST['nombre'];
   #  $email=$_POST['email'];
  #   $password=$_POST['password'];
