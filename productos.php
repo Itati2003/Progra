@@ -13,8 +13,8 @@
         <nav>
             <ul>
                 <li><a href="pagina_de_inicio.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="productos.php">Productos</a></li>
+                <li><a href="carrito.php">Carrito</a></li>
             </ul>
         </nav>
     </header>
