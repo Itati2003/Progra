@@ -32,7 +32,6 @@
 
     <section>
         <h1>Carrito de Compras</h1>
-       <div class="producto">
     <table>
         <thead>
             <tr>
@@ -71,7 +70,6 @@
             ?>
         </tbody>
     </table>
-</div>
         <button>Realizar pago</button>
     </section>
 
