@@ -5,7 +5,8 @@ if($conn){
 }
 #error_reporting(E_ALL);
 #ini_set('display_errors' ,1);
-#if($_SERVER['REQUEST_METHOD] == "POST"){
+if($_SERVER['REQUEST_METHOD] == "POST"){
+    echo "Post";
  #   $nombre=$_POST['nombre'];
   #  $email=$_POST['email'];
  #   $password=$_POST['password'];
@@ -16,5 +17,5 @@ if($conn){
   #      echo "Error: ". $sql ."<br>". $conn->error; 
  #   }
  #   $conn->close();
-#}
+}
 ?>
