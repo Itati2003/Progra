@@ -25,7 +25,7 @@
             <form id="formulario" name="formulario" method="post" action="carrito.php">
             <input name="precio" type="hidden" id="precio" value="50" />
             <input name="producto" type="hidden" id="producto" value="Producto1" />
-            <img src="producto1.jpeg" alt="Producto 1">
+            <img src="Producto1.jpeg" alt="Producto 1">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 1</h5>
                     <p class="card-text">Precio $50</p>
@@ -37,7 +37,7 @@
             <<form id="formulario" name="formulario" method="post" action="carrito.php">
             <input name="precio" type="hidden" id="precio" value="900" />
             <input name="producto" type="hidden" id="producto" value="Producto2" />
-            <img src="producto2.jpeg" alt="Producto 2">
+            <img src="Producto2.jpeg" alt="Producto 2">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 2</h5>
                     <p class="card-text">Precio $900</p>
@@ -49,7 +49,7 @@
             <<form id="formulario" name="formulario" method="post" action="carrito.php">
             <input name="precio" type="hidden" id="precio" value="900" />
             <input name="producto" type="hidden" id="producto" value="Producto2" />
-            <img src="producto3.jpeg" alt="Producto 2">
+            <img src="Producto3.jpeg" alt="Producto 2">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 2</h5>
                     <p class="card-text">Precio $900</p>
