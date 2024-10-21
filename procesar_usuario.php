@@ -2,11 +2,10 @@
 include ("conexion.php");
 if($conn){
     echo "Conexion exitosa";
-}
 #error_reporting(E_ALL);
 #ini_set('display_errors' ,1);
-if($_SERVER['REQUEST_METHOD] == "POST"){
-    echo "Post";
+if(isse($_POST[''])){
+     echo "Conexion exitosa";
  #   $nombre=$_POST['nombre'];
   #  $email=$_POST['email'];
  #   $password=$_POST['password'];
@@ -17,5 +16,6 @@ if($_SERVER['REQUEST_METHOD] == "POST"){
   #      echo "Error: ". $sql ."<br>". $conn->error; 
  #   }
  #   $conn->close();
+}
 }
 ?>
