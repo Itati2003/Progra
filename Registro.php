@@ -22,7 +22,7 @@
             <label for="password">Contraseña:</label>
             <input type="password" name="password" placeholder="Nombre completo">
             
-            <button type="submit">Entrar</button>
+            <button type="submit" name="registrar">Registrar</button>
         </form>
         <?php
         include("procesar_usuario.php");
