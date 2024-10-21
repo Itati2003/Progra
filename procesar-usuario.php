@@ -1,40 +1,18 @@
 <!-- archivo: procesar_registro.php -->
 <?php
-$servername = "localhost";
-$username = "atenea";
-$password = "123";
-$database = "baseDAt";
-
-// Crear la conexión
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Error en la conexión: " . $conn->connect_error);
+include 'conexion.php';
+error_reporting(E_ALL);
+ini_set('display_errors' ,1);
+if($_SERVER['REQUEST_METHOD] == "POST"){
+    $nombre=$_POST['nombre'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $sql="INSERT INTO usuarios (nombre, email, password) VALUES ('$nombre','$email','$password');
+    if($conn->quey($sql)===TRUE){
+        echo "Registro exitoso";
+    } else {
+        echo "Error: ". $sql ."<br>". $conn->error; 
+    }
+    $conn->close();
 }
-
-// Obtener los datos enviados desde el formulario
-$nombre = $_POST['nombre'];
-$email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);  // Encriptar la contraseña
-
-// Preparar la consulta SQL
-$sql = "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)";
-
-// Preparar el statement
-$stmt = $conn->prepare($sql);
-
-// Vincular los parámetros
-$stmt->bind_param("sss", $nombre, $email, $password);
-
-// Ejecutar la consulta
-if ($stmt->execute()) {
-    echo "Registro exitoso";
-} else {
-    echo "Error: " . $stmt->error;
-}
-
-// Cerrar la conexión
-$stmt->close();
-$conn->close();
 ?>
