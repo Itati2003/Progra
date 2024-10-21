@@ -7,7 +7,7 @@ if($conn){
       $nombre=$_POST['nombre'];
       $email=$_POST['email'];
       $password=$_POST['password'];
-     $sql="INSERT INTO usuarios (nombre, email, password) VALUES ('$nombre','$email','$password');
+     $sql="INSERT INTO usuarios(nombre, email, password) VALUES ('$nombre','$email','$password')";
      if($sql){
       echo "exitosa";
       }
