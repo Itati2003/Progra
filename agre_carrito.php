@@ -1,4 +1,9 @@
 <?php session_start();
+if (!isset($_SESSION['carrito'])) {
+    $_SESSION['carrito'] = array();
+}
+$carrito_user = $_SESSION['carrito'];
+
   if(isset($_SESSION['carrito'])){
     $carrito_user=$_SESSION['carrito'];
     if(isset($_POST['producto'])){
