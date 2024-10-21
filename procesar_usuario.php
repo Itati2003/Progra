@@ -4,7 +4,7 @@ if($conn){
     echo "Conexion exitosa";
 #error_reporting(E_ALL);
 #ini_set('display_errors' ,1);
-if(isse($_POST[''])){
+if(isse($_POST['registrar'])){
      echo "Conexion exitosa";
  #   $nombre=$_POST['nombre'];
   #  $email=$_POST['email'];
