@@ -21,45 +21,43 @@
 
     <section>
         <h1>Catálogo de Productos</h1>
-        <div class="producto">
-            <form id="formulario1" name="formulario" method="post" action="agre_carrito.php">
-            <input name="precio" type="hidden" id="precio" value="50" />
-            <input name="producto" type="hidden" id="producto" value="Producto1" />
-            <input name="cantidad" type="hidden" id="cantidad" value="1" />
-            <img src="Producto1.jpeg" alt="Producto1">
-                <div class="card-body">
-                    <h5 class="card-title"> Producto 1</h5>
-                    <p class="card-text">Precio $50</p>
-                    <button type="submit">Añadir al Carrito</button>
-                </div>
-            </form>
-        </div>
-        <div class="producto">
-            <form id="formulario2" name="formulario" method="post" action="agre_carrito.php">
-            <input name="precio" type="hidden" id="precio" value="900" />
-            <input name="producto" type="hidden" id="producto" value="Producto2" />
-            <input name="cantidad" type="hidden" id="cantidad" value="1" />
-            <img src="Producto2.jpeg" alt="Producto2">
-                <div class="card-body">
-                    <h5 class="card-title"> Producto 2</h5>
-                    <p class="card-text">Precio $900</p>
-                    <button type="submit">Añadir al Carrito</button>
-                </div>
-            </form>
-        </div>
-        <div class="producto">
-            <form id="formulario3" name="formulario" method="post" action="agre_carrito.php">
-            <input name="precio" type="hidden" id="precio" value="1230" />
-            <input name="producto" type="hidden" id="producto" value="Producto3" />
-            <input name="cantidad" type="hidden" id="cantidad" value="1" />
-            <img src="Producto3.jpeg" alt="Producto3">
-                <div class="card-body">
-                    <h5 class="card-title"> Producto 3</h5>
-                    <p class="card-text">Precio $1230</p>
-                    <button type="submit">Añadir al Carrito</button>
-                </div>
-            </form>
-        </div>
+        <?php
+        // Conexión a la base de datos
+        $conn = new mysqli('localhost', 'usuario', 'contraseña', 'tienda');
+
+        // Verificar la conexión
+        if ($conn->connect_error) {
+            die("Conexión fallida: " . $conn->connect_error);
+        }
+
+        // Consulta para obtener los productos
+        $sql = "SELECT id, nombre, precio, imagen FROM productos";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Mostrar los productos
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="producto">';
+                echo '<form method="post" action="agre_carrito.php">';
+                echo '<input name="precio" type="hidden" value="' . $row["precio"] . '" />';
+                echo '<input name="producto" type="hidden" value="' . $row["nombre"] . '" />';
+                echo '<input name="cantidad" type="hidden" value="1" />';
+                echo '<img src="' . $row["imagen"] . '" alt="' . $row["nombre"] . '">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $row["nombre"] . '</h5>';
+                echo '<p class="card-text">Precio $' . $row["precio"] . '</p>';
+                echo '<button type="submit">Añadir al Carrito</button>';
+                echo '</div>';
+                echo '</form>';
+                echo '</div>';
+            }
+        } else {
+            echo "No hay productos disponibles.";
+        }
+
+        // Cerrar la conexión
+        $conn->close();
+        ?>
     </section>
 </body>
 </html>
