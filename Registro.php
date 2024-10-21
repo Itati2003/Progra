@@ -14,13 +14,13 @@
         <h1>Registrarse</h1>
         <form method="post">
             <label for="nombre">Nombre:</label>
-            <input type="nombre" name="nombre" placeholder="Nombre completo">
+            <input type="text" name="nombre" placeholder="Nombre completo">
 
             <label for="email">Correo Electrónico:</label>
-            <input type="email" name="email" placeholder="Nombre completo">
+            <input type="email" name="email" placeholder="Correo electronico">
             
             <label for="password">Contraseña:</label>
-            <input type="password" name="password" placeholder="Nombre completo">
+            <input type="password" name="password" placeholder="Contraseña">
             
             <button type="submit" name="registrar">Registrar</button>
         </form>
