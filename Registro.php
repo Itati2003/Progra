@@ -12,15 +12,15 @@
     <!-- Formulario de REGISTRO-->
     <div class="login-container">
         <h1>Registrarse</h1>
-        <form action="procesar_usuario.php" method="post">
+        <form method="post">
             <label for="nombre">Nombre:</label>
-            <input type="nombre" id="nombre" name="nombre" required>
+            <input type="nombre" name="nombre" placeholder="Nombre completo">
 
             <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" name="email" placeholder="Nombre completo">
             
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" name="password" placeholder="Nombre completo">
             
             <button type="submit">Entrar</button>
         </form>
