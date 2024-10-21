@@ -23,8 +23,8 @@
         <h1>Catálogo de Productos</h1>
         <div class="producto">
             <form id="formulario" name="formulario" method="post" action="carrito.php">
-            <input name="precio" id="precio" value="50" />
-            <input name="producto" id="producto" value="Producto1" />
+            <input name="precio" type="hidden" id="precio" value="50" />
+            <input name="producto" type="hidden" id="producto" value="Producto1" />
             <img src="producto1.jpg" alt="Producto 1">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 1</h5>
@@ -35,8 +35,8 @@
         </div>
         <div class="producto">
             <<form id="formulario" name="formulario" method="post" action="carrito.php">
-            <input name="precio" id="precio" value="900" />
-            <input name="producto" id="producto" value="Producto2" />
+            <input name="precio" type="hidden" id="precio" value="900" />
+            <input name="producto" type="hidden" id="producto" value="Producto2" />
             <img src="producto2.jpg" alt="Producto 2">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 2</h5>
@@ -47,8 +47,8 @@
         </div>
         <div class="producto">
             <<form id="formulario" name="formulario" method="post" action="carrito.php">
-            <input name="precio" id="precio" value="900" />
-            <input name="producto" id="producto" value="Producto2" />
+            <input name="precio" type="hidden" id="precio" value="900" />
+            <input name="producto" type="hidden" id="producto" value="Producto2" />
             <img src="producto2.jpg" alt="Producto 2">
                 <div class="card-body">
                     <h5 class="card-title"> Producto 2</h5>
@@ -58,9 +58,5 @@
             </form>
         </div>
     </section>
-
-    <footer>
-        <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
