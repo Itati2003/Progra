@@ -32,32 +32,46 @@
 
     <section>
         <h1>Carrito de Compras</h1>
-        <div class="producto">
-            <ul>
-                <?php
-                    if (isset($_SESSION['carrito'])) {
-                        $total = 0;
-                        for ($i = 0; $i <= count($carrito_user) - 1; $i++) {
-                            if ($carrito_user[$i] != NULL) {
-                ?>
-                            <li>
-                                <div class="card-body">
-                                    <h5 class="card-title">Cantidad: <?php echo $carrito_user[$i]['cantidad']; ?> : <?php echo $carrito_user[$i]['Producto']; ?></h5>
-                                    <span class="text-muted"><?php echo $carrito_user[$i]['precio'] * $carrito_user[$i]['cantidad']; ?></span>
-                                </div>
-                            </li>
-                <?php
-                                $total += $carrito_user[$i]['precio'] * $carrito_user[$i]['cantidad'];
-                            }
+       <div class="producto">
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                if (isset($_SESSION['carrito'])) {
+                    $total = 0;
+                    foreach ($carrito_user as $item) {
+                        if ($item != NULL) {
+            ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($item['Producto']); ?></td>
+                            <td><?php echo htmlspecialchars($item['cantidad']); ?></td>
+                            <td><?php echo htmlspecialchars($item['precio']); ?>$</td>
+                            <td><?php echo htmlspecialchars($item['precio'] * $item['cantidad']); ?>$</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+            <?php
+                            $total += $item['precio'] * $item['cantidad'];
                         }
                     }
-                ?>
-                <li>
-                    <span>Total: </span>
-                    <strong><?php echo $total; ?> $</strong>
-                </li>
-            </ul>
-        </div>
+            ?>
+                    <tr>
+                        <td colspan="3"><strong>Total:</strong></td>
+                        <td colspan="2"><strong><?php echo htmlspecialchars($total); ?>$</strong></td>
+                    </tr>
+            <?php
+                }
+            ?>
+        </tbody>
+    </table>
+</div>
         <button>Realizar pago</button>
     </section>
 
