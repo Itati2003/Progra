@@ -22,7 +22,7 @@
     <section>
         <h1>Catálogo de Productos</h1>
         <div class="producto">
-            <form id="formulario1" name="formulario" method="post" action="carrito.php">
+            <form id="formulario1" name="formulario" method="post" action="agre_carrito.php">
             <input name="precio" type="hidden" id="precio" value="50" />
             <input name="producto" type="hidden" id="producto" value="Producto1" />
             <img src="Producto1.jpeg" alt="Producto1">
