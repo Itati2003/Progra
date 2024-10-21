@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="diseno.css">
 </head>
 <body>
+    <?php
+        $carrito_user=$_SESSION['carrito'];
+        $_SESSION['carrito']=$carrito_user;
+        if(isset($_SESSION['carrito'])){
+            for($i=0;$i<=count($carrito_user)-1;$i ++){
+                if($carrito_user[$i]!=NULL){
+                    $total_cantidad = $carrito_user['cantidad']
+                    $total_cantidad ++;
+                    $total_cantidad += $total_cantidad;
+                }
+            }
+        }
+    ?>
     <header>
         <h1>Mi Tienda</h1>
         <nav>
@@ -41,7 +54,7 @@
                 <!-- Repetir para otros productos en el carrito -->
             </tbody>
         </table>
-        <button>Finalizar Compra</button>
+        <button>Realizar pago</button>
     </section>
 
 </body>
