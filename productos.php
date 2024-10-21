@@ -22,11 +22,8 @@
     <section>
         <h1>Catálogo de Productos</h1>
         <?php
-        // Conexión a la base de datos
-        $conn = new mysqli('localhost', 'usuario', 'contraseña', 'tienda');
-
-        // Verificar la conexión
-        if ($conn->connect_error) {
+        include ("conexion.php");
+        if($conn->connect_error) {
             die("Conexión fallida: " . $conn->connect_error);
         }
 
