@@ -24,8 +24,8 @@
         <nav>
             <ul>
                 <li><a href="pagina_de_inicio.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="mision.html">Misión</a></li>
+                <li><a href="productos.php">Productos</a></li>
+                <li><a href="mision.php">Misión</a></li>
             </ul>
         </nav>
     </header>
@@ -53,7 +53,7 @@
                     }
                 ?>
                 <li>
-                    <span>Total: (EUR)</span>
+                    <span>Total: </span>
                     <strong><?php echo $total; ?> $</strong>
                 </li>
             </ul>
