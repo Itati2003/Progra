@@ -1,5 +1,6 @@
 <?php
 include ("conexion.php");
+session_start();
 if($conn){
     echo "Conexion exitosa";
      echo "<br>";
@@ -10,7 +11,7 @@ if($conn){
         $password = $_POST['password'];
         $sql="SELECT * FROM usuarios WHERE email = '$email' AND password = '$password'";
         $result = $conn->query($sql);
-        if($result && $result->num_rows > 0);{
+        if($result && $result->num_rows > 0){
             $user=$result->fetch_assoc();
             $_SESSION['nombre']=$user['nombre'];
             header("Location: productos.html");
