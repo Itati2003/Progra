@@ -42,7 +42,7 @@
                 ?>
                             <li>
                                 <div class="card-body">
-                                    <h5 class="card-title">Cantidad: <?php echo $carrito_user[$i]['cantidad']; ?> : <?php echo $carrito_user[$i]['producto']; ?></h5>
+                                    <h5 class="card-title">Cantidad: <?php echo $carrito_user[$i]['cantidad']; ?> : <?php echo $carrito_user[$i]['Producto']; ?></h5>
                                     <span class="text-muted"><?php echo $carrito_user[$i]['precio'] * $carrito_user[$i]['cantidad']; ?></span>
                                 </div>
                             </li>
